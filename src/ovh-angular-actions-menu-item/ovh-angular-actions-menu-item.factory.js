@@ -52,6 +52,7 @@ angular.module("ovh-angular-actions-menu").factory("ActionsMenuItem", function (
             this.href = options.href;
             this.target = options.target || "_self";
             this.external = options.external || false;
+            this.onRedirection = _.isFunction(options.onRedirection) ? options.onRedirection : angular.noop;
         } else if (options.state && !options.href && !options.subItems) {
             this.state = options.state;
             this.stateParams = options.stateParams || {};
