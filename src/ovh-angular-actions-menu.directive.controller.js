@@ -25,10 +25,10 @@ angular.module("ovh-angular-actions-menu").controller("ActionsMenuCtrl", functio
             self.activeActionItem = actionItem;
             self.onPageSwitch();
         } else {
-            if (!actionItem.state) {
-                actionItem.onRedirection();
-            }
             self.popoverSettings.isOpen = false;
+            if (actionItem.onClick) {
+                return actionItem.onClick();
+            }
         }
 
         return true;
