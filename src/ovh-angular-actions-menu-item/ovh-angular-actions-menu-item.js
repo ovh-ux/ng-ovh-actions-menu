@@ -16,22 +16,15 @@
  *  - actions with confirmation.
  */
 
-import translate from 'angular-translate';
 import responsivePopover from 'ovh-angular-responsive-popover';
 
-import actionsMenuItem from './ovh-angular-actions-menu-item/ovh-angular-actions-menu-item'
-
-import actionsMenuDirective from './ovh-angular-actions-menu.directive';
-import actionsMenuProvider from './ovh-angular-actions-menu.provider';
-import actionsMenuFactory from './ovh-angular-actions-menu.factory';
+import actionsMenuItemDirective from './ovh-angular-actions-menu-item.directive';
+import actionsMenuItemFactory from './ovh-angular-actions-menu-item.factory';
 
 export default angular
-    .module("ovh-angular-actions-menu", [
-        translate,
-        responsivePopover,
-        actionsMenuItem
+    .module("ovh-angular-actions-menu-item", [
+        responsivePopover
     ])
-    .provider("actionsMenu", actionsMenuProvider)
-    .factory("ActionsMenu", actionsMenuFactory)
-    .directive("actionsMenu", actionsMenuDirective)
+    .factory("ActionsMenuItem", actionsMenuItemFactory)
+    .directive("actionsMenuItem", actionsMenuItemDirective)
     .name;

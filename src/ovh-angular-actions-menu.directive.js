@@ -44,18 +44,21 @@
  *  </actions-menu>
  *  </pre>
  */
-angular.module("ovh-angular-actions-menu").directive("actionsMenu", function () {
+
+import actionsMenuCtrl from './ovh-angular-actions-menu.directive.controller'
+
+export default function () {
     "use strict";
 
     return {
         restrict: "E",
         transclude: true,
-        templateUrl: "ovh-angular-actions-menu.html",
+        template: require("./ovh-angular-actions-menu.html"),
         scope: {
             actionsOptions: "=actionsMenuOptions",
             popoverSettings: "=actionsMenuPopoverSettings"
         },
-        controller: "ActionsMenuCtrl",
+        controller: actionsMenuCtrl,
         controllerAs: "$ctrl",
         bindToController: true,
         link: function (scope, tElement, attributs, actionsMenuCtrl) {
@@ -130,4 +133,4 @@ angular.module("ovh-angular-actions-menu").directive("actionsMenu", function () 
 
         }
     };
-});
+};

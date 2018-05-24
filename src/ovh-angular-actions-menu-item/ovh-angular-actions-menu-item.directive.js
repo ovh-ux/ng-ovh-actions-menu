@@ -10,12 +10,12 @@
  *  @param {ActionMenuItem} actions-menu-item An instance of ActionMenuItem.
  *  @param {Function} actions-menu-item-on-click A callback function called when the action menu item has been clicked.
  */
-angular.module("ovh-angular-actions-menu").directive("actionsMenuItem", function () {
+export default function () {
     "use strict";
 
     return {
         restrict: "A",
-        templateUrl: "ovh-angular-actions-menu-item/ovh-angular-actions-menu-item.html",
+        templateUrl: require("./ovh-angular-actions-menu-item.html"),
         scope: {
             actionsMenuItem: "=actionsMenuItem",
             onClick: "&actionsMenuItemOnClick"
@@ -26,4 +26,4 @@ angular.module("ovh-angular-actions-menu").directive("actionsMenuItem", function
         },
         controllerAs: "$ctrl"
     };
-});
+};

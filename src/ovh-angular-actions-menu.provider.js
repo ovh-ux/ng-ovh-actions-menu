@@ -13,7 +13,7 @@
  *      });
  * </pre>
  */
-angular.module("ovh-angular-actions-menu").provider("actionsMenu", function () {
+export default function () {
 
     "use strict";
 
@@ -53,7 +53,7 @@ angular.module("ovh-angular-actions-menu").provider("actionsMenu", function () {
      *  @description
      *  This service enable you to load translation file.
      */
-    self.$get = function ($translate, $translatePartialLoader) {
+    self.$get = function ($translate/*, $translatePartialLoader*/) {
         return {
             /**
              *  @ngdoc method
@@ -66,10 +66,10 @@ angular.module("ovh-angular-actions-menu").provider("actionsMenu", function () {
              *  @return {Promise} When the translation file is loaded.
              */
             loadTranslations: function () {
-                $translatePartialLoader.addPart(translationPath);
+                // $translatePartialLoader.addPart(translationPath);
                 return $translate.refresh();
             }
         };
     };
 
-});
+};

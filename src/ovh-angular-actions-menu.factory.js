@@ -26,7 +26,7 @@
  *  @param {Object} options Options for creating a new ActionsMenu instance.
  *  @param {Array<Object>} [options.actionsMenuItems=Empty Array] The options of the items that will be added to the ActionsMenu instance.
  */
-angular.module("ovh-angular-actions-menu").factory("ActionsMenu", function (ActionsMenuItem) {
+export default function (ActionsMenuItem) {
 
     "use strict";
 
@@ -79,4 +79,4 @@ angular.module("ovh-angular-actions-menu").factory("ActionsMenu", function (Acti
 
     return ActionsMenu;
 
-});
+};

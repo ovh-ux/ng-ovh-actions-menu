@@ -1,4 +1,4 @@
-angular.module("ovh-angular-actions-menu").controller("ActionsMenuCtrl", function (actionsMenu, ActionsMenu) {
+export default function (actionsMenu, ActionsMenu) {
     "use strict";
 
     var self = this;
@@ -63,4 +63,4 @@ angular.module("ovh-angular-actions-menu").controller("ActionsMenuCtrl", functio
 
     /* -----  End of INITIALIZATION  ------*/
 
-});
+};

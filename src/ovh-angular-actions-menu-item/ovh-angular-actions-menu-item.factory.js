@@ -30,7 +30,7 @@
  *  @param {String} [options.target=_self] The target of the href anchor tag. This will be the target html attribute.
  *  @param {String} [options.title] The title of the actions menu item.
  */
-angular.module("ovh-angular-actions-menu").factory("ActionsMenuItem", function () {
+export default function () {
 
     "use strict";
 
@@ -132,4 +132,4 @@ angular.module("ovh-angular-actions-menu").factory("ActionsMenuItem", function (
 
     return ActionsMenuItem;
 
-});
+};
