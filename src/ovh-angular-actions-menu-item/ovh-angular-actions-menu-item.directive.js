@@ -11,8 +11,6 @@
  *  @param {Function} actions-menu-item-on-click A callback function called when the action menu item has been clicked.
  */
 export default function () {
-    "use strict";
-
     return {
         restrict: "A",
         templateUrl: require("./ovh-angular-actions-menu-item.html"),

@@ -14,9 +14,6 @@
  * </pre>
  */
 export default function () {
-
-    "use strict";
-
     var self = this;
     var translationPath = "../bower_components/ovh-angular-actions-menu/dist/ovh-angular-actions-menu";
 

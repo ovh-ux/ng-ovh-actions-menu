@@ -48,8 +48,6 @@
 import actionsMenuCtrl from './ovh-angular-actions-menu.directive.controller'
 
 export default function () {
-    "use strict";
-
     return {
         restrict: "E",
         transclude: true,

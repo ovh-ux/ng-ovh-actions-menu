@@ -31,9 +31,6 @@
  *  @param {String} [options.title] The title of the actions menu item.
  */
 export default function () {
-
-    "use strict";
-
     /*= ==================================
     =            CONSTRUCTOR            =
     ===================================*/

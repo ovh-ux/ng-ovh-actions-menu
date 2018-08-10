@@ -1,6 +1,4 @@
-export default function (actionsMenu, ActionsMenu) {
-    "use strict";
-
+export default /* @ngInject */  function (actionsMenu, ActionsMenu) {
     var self = this;
 
     self.actionsMenu = null;

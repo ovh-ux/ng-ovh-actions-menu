@@ -26,10 +26,7 @@
  *  @param {Object} options Options for creating a new ActionsMenu instance.
  *  @param {Array<Object>} [options.actionsMenuItems=Empty Array] The options of the items that will be added to the ActionsMenu instance.
  */
-export default function (ActionsMenuItem) {
-
-    "use strict";
-
+export default /* @ngInject */ function (ActionsMenuItem) {
     /*= ==================================
     =            CONSTRUCTOR            =
     ===================================*/
