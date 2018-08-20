@@ -50,7 +50,7 @@ export default function () {
      *  @description
      *  This service enable you to load translation file.
      */
-    self.$get = function ($translate/*, $translatePartialLoader*/) {
+    self.$get = /* @ngInject*/ function ($translate/*, $translatePartialLoader*/) {
         return {
             /**
              *  @ngdoc method
