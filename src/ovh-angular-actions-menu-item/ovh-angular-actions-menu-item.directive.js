@@ -6,22 +6,27 @@
  *  @description
  *  This directive represent an item into an actions menu.
  *
- *  This directive is included by its parent directive: actionsMenu, and should not be called offside of the module scope.
+ *  This directive is included by its parent directive: actionsMenu, and should not be called
+ *  offside of the module scope.
  *  @param {ActionMenuItem} actions-menu-item An instance of ActionMenuItem.
- *  @param {Function} actions-menu-item-on-click A callback function called when the action menu item has been clicked.
+ *  @param {Function} actions-menu-item-on-click A callback function called when the action menu
+ *  item has been clicked.
  */
+
+import template from './ovh-angular-actions-menu-item.html';
+
 export default function () {
-    return {
-        restrict: "A",
-        templateUrl: require("./ovh-angular-actions-menu-item.html"),
-        scope: {
-            actionsMenuItem: "=actionsMenuItem",
-            onClick: "&actionsMenuItemOnClick"
-        },
-        bindToController: true,
-        controller: function () {
-            // NOTHING HERE
-        },
-        controllerAs: "$ctrl"
-    };
-};
+  return {
+    restrict: 'A',
+    template,
+    scope: {
+      actionsMenuItem: '=actionsMenuItem',
+      onClick: '&actionsMenuItemOnClick',
+    },
+    bindToController: true,
+    controller() {
+      // NOTHING HERE
+    },
+    controllerAs: '$ctrl',
+  };
+}

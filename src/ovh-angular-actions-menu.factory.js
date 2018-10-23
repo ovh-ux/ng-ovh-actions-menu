@@ -24,34 +24,37 @@
  *
  *  @constructor
  *  @param {Object} options Options for creating a new ActionsMenu instance.
- *  @param {Array<Object>} [options.actionsMenuItems=Empty Array] The options of the items that will be added to the ActionsMenu instance.
+ *  @param {Array<Object>} [options.actionsMenuItems=Empty Array] The options of the items that
+ *  will be added to the ActionsMenu instance.
  */
+import angular from 'angular';
+
 export default /* @ngInject */ function (ActionsMenuItem) {
-    /*= ==================================
+  /*= ==================================
     =            CONSTRUCTOR            =
-    ===================================*/
+    =================================== */
 
-    function ActionsMenu (options) {
-        var self = this;
+  function ActionsMenu(options) {
+    const self = this;
 
-        this.actions = [];
+    this.actions = [];
 
-        if (options.actionsMenuItems && options.actionsMenuItems.length) {
-            angular.forEach(options.actionsMenuItems, function (actionMenuItemOptions) {
-                self.addActionItem(actionMenuItemOptions);
-            });
-        }
+    if (options.actionsMenuItems && options.actionsMenuItems.length) {
+      angular.forEach(options.actionsMenuItems, (actionMenuItemOptions) => {
+        self.addActionItem(actionMenuItemOptions);
+      });
     }
+  }
 
-    /* -----  End of CONSTRUCTOR  ------*/
+  /* -----  End of CONSTRUCTOR  ------*/
 
-    /*= ========================================
+  /*= ========================================
     =            PROTOTYPE METHODS            =
-    =========================================*/
+    ========================================= */
 
-    /* ----------  ACTIONS MENU ITEMS  ----------*/
+  /* ----------  ACTIONS MENU ITEMS  ----------*/
 
-    /**
+  /**
      *  @ngdoc method
      *  @name actionsMenu.object:ActionsMenu#addActionItem
      *  @methodOf actionsMenu.object:ActionsMenu
@@ -59,21 +62,21 @@ export default /* @ngInject */ function (ActionsMenuItem) {
      *  @description
      *  Add an actions menu item into actions list.
      *
-     *  @param {Object} actionMenuItemOptions The options for creating a new action menu item. See ActionsMenuItem factory for available options.
+     *  @param {Object} actionMenuItemOptions The options for creating a new action menu item.
+     *  See ActionsMenuItem factory for available options.
      *
      *  @returns {ActionsMenuItem} The added actions menu item.
      */
-    ActionsMenu.prototype.addActionItem = function (actionMenuItemOptions) {
-        var self = this;
-        var newActionItem = new ActionsMenuItem(actionMenuItemOptions);
+  ActionsMenu.prototype.addActionItem = function addActionItem(actionMenuItemOptions) {
+    const self = this;
+    const newActionItem = new ActionsMenuItem(actionMenuItemOptions);
 
-        self.actions.push(newActionItem);
+    self.actions.push(newActionItem);
 
-        return newActionItem;
-    };
+    return newActionItem;
+  };
 
-    /* -----  End of PROTOTYPE METHODS  ------*/
+  /* -----  End of PROTOTYPE METHODS  ------*/
 
-    return ActionsMenu;
-
-};
+  return ActionsMenu;
+}

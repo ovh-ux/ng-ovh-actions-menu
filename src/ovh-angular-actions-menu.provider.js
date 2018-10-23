@@ -14,14 +14,14 @@
  * </pre>
  */
 export default function () {
-    var self = this;
-    var translationPath = "../bower_components/ovh-angular-actions-menu/dist/ovh-angular-actions-menu";
+  const self = this;
+  let translationPath = '../bower_components/ovh-angular-actions-menu/dist/ovh-angular-actions-menu';
 
-    /*= ====================================
+  /*= ====================================
     =            CONFIGURATION            =
-    =====================================*/
+    ===================================== */
 
-    /**
+  /**
      *  @ngdoc method
      *  @name actionsMenu.actionsMenuProvider#setTranslationPath
      *  @methodOf actionsMenu.actionsMenuProvider
@@ -33,26 +33,26 @@ export default function () {
      *
      *  @return {String} The new configured translation path.
      */
-    self.setTranslationPath = function (path) {
-        if (path) {
-            translationPath = path;
-        }
+  self.setTranslationPath = function (path) {
+    if (path) {
+      translationPath = path;
+    }
 
-        return translationPath;
-    };
+    return translationPath;
+  };
 
-    /* -----  End of CONFIGURATION  ------*/
+  /* -----  End of CONFIGURATION  ------*/
 
-    /**
+  /**
      *  @ngdoc service
      *  @name actionsMenu.service:actionsMenu
      *
      *  @description
      *  This service enable you to load translation file.
      */
-    self.$get = /* @ngInject*/ function ($translate/*, $translatePartialLoader*/) {
-        return {
-            /**
+  self.$get = /* @ngInject */ function ($translate/* , $translatePartialLoader */) {
+    return {
+      /**
              *  @ngdoc method
              *  @name actionsMenu.service:actionsMenu#
              *  @methodOf actionsMenu.service:actionsMenu
@@ -62,11 +62,10 @@ export default function () {
              *
              *  @return {Promise} When the translation file is loaded.
              */
-            loadTranslations: function () {
-                // $translatePartialLoader.addPart(translationPath);
-                return $translate.refresh();
-            }
-        };
+      loadTranslations() {
+        // $translatePartialLoader.addPart(translationPath);
+        return $translate.refresh();
+      },
     };
-
-};
+  };
+}
