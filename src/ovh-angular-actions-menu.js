@@ -40,14 +40,6 @@ angular
   .provider('actionsMenu', actionsMenuProvider)
   .factory('ActionsMenu', actionsMenuFactory)
   .directive('actionsMenu', actionsMenuDirective)
-  .run(($translate, asyncLoader) => {
-    asyncLoader.addTranslations(
-          import(`./translations/Messages_${$translate.use()}.xml`)
-            .catch(() => import(`./translations/Messages_${$translate.fallbackLanguage()}.xml`))
-            .then(x => x.default),
-    );
-
-    $translate.refresh();
-  });
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;
