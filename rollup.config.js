@@ -1,5 +1,18 @@
-import config from '@ovh-ux/component-rollup-config';
+import rollupConfig from '@ovh-ux/component-rollup-config';
 
-export default config({
+const config = rollupConfig({
   input: 'src/ovh-angular-actions-menu.js',
 });
+
+export default [
+  config.cjs(),
+  config.umd({
+    output: {
+      globals: {
+        angular: 'angular',
+        'ovh-angular-responsive-popover': 'ovh-angular-responsive-popover',
+        'angular-translate': 'pascalprecht.translate',
+      },
+    },
+  }),
+];
