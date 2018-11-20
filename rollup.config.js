@@ -10,8 +10,6 @@ export default [
     output: {
       globals: {
         angular: 'angular',
-        'ovh-angular-responsive-popover': 'ovh-angular-responsive-popover',
-        'angular-translate': 'pascalprecht.translate',
       },
     },
   }),
