@@ -18,7 +18,7 @@
  */
 
 import angular from 'angular';
-import responsivePopover from 'ovh-angular-responsive-popover';
+import 'ovh-angular-responsive-popover';
 
 import actionsMenuItemDirective from './ovh-angular-actions-menu-item.directive';
 import actionsMenuItemFactory from './ovh-angular-actions-menu-item.factory';
@@ -27,7 +27,7 @@ const moduleName = 'ovh-angular-actions-menu-item';
 
 angular
   .module(moduleName, [
-    responsivePopover,
+    'ovh-angular-responsive-popover',
   ])
   .factory('ActionsMenuItem', actionsMenuItemFactory)
   .directive('actionsMenuItem', actionsMenuItemDirective);

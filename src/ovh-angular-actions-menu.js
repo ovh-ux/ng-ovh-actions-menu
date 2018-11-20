@@ -18,11 +18,10 @@
  */
 
 import angular from 'angular';
-import translate from 'angular-translate';
-import responsivePopover from 'ovh-angular-responsive-popover';
+import 'angular-translate';
+import 'ovh-angular-responsive-popover';
 
 import actionsMenuItem from './ovh-angular-actions-menu-item/ovh-angular-actions-menu-item';
-
 import actionsMenuDirective from './ovh-angular-actions-menu.directive';
 import actionsMenuProvider from './ovh-angular-actions-menu.provider';
 import actionsMenuFactory from './ovh-angular-actions-menu.factory';
@@ -33,8 +32,8 @@ const moduleName = 'ovh-angular-actions-menu';
 
 angular
   .module(moduleName, [
-    translate,
-    responsivePopover,
+    'pascalprecht.translate',
+    'ovh-angular-responsive-popover',
     actionsMenuItem,
   ])
   .provider('actionsMenu', actionsMenuProvider)
