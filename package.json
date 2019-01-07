@@ -12,6 +12,7 @@
     "dist"
   ],
   "main": "./dist/cjs/ovh-angular-actions-menu.js",
+  "module": "./dist/esm/ovh-angular-actions-menu.js",
   "browser": "./dist/umd/ovh-angular-actions-menu.js",
   "scripts": {
     "build": "rollup -c",
