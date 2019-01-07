@@ -1,14 +1,14 @@
-# ovh-angular-actions-menu
+# ng-ovh-actions-menu
 
 ![githubbanner](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh-ux/ovh-angular-actions-menu.svg)](https://travis-ci.org/ovh-ux/ovh-angular-actions-menu)
+[![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh-ux/ng-ovh-actions-menu.svg)](https://travis-ci.org/ovh-ux/ng-ovh-actions-menu)
 
-[![NPM](https://nodei.co/npm/ovh-angular-actions-menu.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-angular-actions-menu/)
+[![NPM](https://nodei.co/npm/ng-ovh-actions-menu.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ng-ovh-actions-menu/)
 
 > An actions menu gives the opportunity to group a set of actions available for a specific context under a single menu.
 
-`ovh-angular-actions-menu` module follows the UX specification
+`ng-ovh-actions-menu` module follows the UX specification
 
 ## Dependencies
 
@@ -20,20 +20,20 @@
 ## Bower
 
 ```sh
-bower install ovh-angular-actions-menu --save
+bower install ng-ovh-actions-menu --save
 ```
 
 ## NPM
 
 ```sh
-npm install ovh-angular-actions-menu --save
+npm install ng-ovh-actions-menu --save
 ```
 
 ## Get the sources
 
 ```sh
-git clone https://github.com/ovh-ux/ovh-angular-actions-menu.git
-cd ovh-angular-actions-menu
+git clone https://github.com/ovh-ux/ng-ovh-actions-menu.git
+cd ng-ovh-actions-menu
 npm install
 bower install
 ```
@@ -41,7 +41,7 @@ bower install
 You've developed a new cool feature? Fixed an annoying bug? We'd be happy
 to hear from you!
 
-Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-angular-actions-menu/blob/master/CONTRIBUTING.md)
+Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ng-ovh-actions-menu/blob/master/CONTRIBUTING.md)
 
 Then inject actionsMenu module in your module declaration:
 
@@ -50,7 +50,7 @@ import angular from 'angular';
 
 angular
   .module('myApp', [
-    'ovh-angular-actions-menu',
+    'ng-ovh-actions-menu',
   ]);
 ```
 
@@ -80,8 +80,8 @@ This is the main directive of the module. It's creating a popover with desired a
 
 | Param | Type | Details |
 | ---- | ---- | ---- |
-| ovh-angular-actions-menu-options | Object[] | A list of actions options that will be displayed into actionsMenu. See ActionsMenu factory and ActionsMenuItem factory for available options. |
-| ovh-angular-actions-menu-popover-settings | Object | A list of options of the popover. For now only : class, placement, trigger and isOpen options are supported. Feel free to add others!!! See [ui.bootstrap.popover](https://angular-ui.github.io/bootstrap/#/popover) for more informations. |
+| ng-ovh-actions-menu-options | Object[] | A list of actions options that will be displayed into actionsMenu. See ActionsMenu factory and ActionsMenuItem factory for available options. |
+| ng-ovh-actions-menu-popover-settings | Object | A list of options of the popover. For now only : class, placement, trigger and isOpen options are supported. Feel free to add others!!! See [ui.bootstrap.popover](https://angular-ui.github.io/bootstrap/#/popover) for more informations. |
 
 #### Example
 
@@ -115,8 +115,8 @@ angular
 And in your html view:
 
 ```html
-<actions-menu data-ovh-angular-actions-menu-options="actionsOptions"
-             data-ovh-angular-actions-menu-popover-settings="popoverSettings">
+<actions-menu data-ng-ovh-actions-menu-options="actionsOptions"
+             data-ng-ovh-actions-menu-popover-settings="popoverSettings">
    <i class="my-font my-font-actions"></i>
    Button actions
 </actions-menu>
@@ -132,8 +132,8 @@ This directive is included by its parent directive: actionsMenu, and should not 
 
 | Param | Type | Details |
 | ---- | ---- | ---- |
-| ovh-angular-actions-menu-item | ActionMenuItem | An instance of ActionMenuItem. |
-| ovh-angular-actions-menu-item-on-click | Function | A callback function called when the action menu item has been clicked. |
+| ng-ovh-actions-menu-item | ActionMenuItem | An instance of ActionMenuItem. |
+| ng-ovh-actions-menu-item-on-click | Function | A callback function called when the action menu item has been clicked. |
 
 ### <a name="actionsMenu_object_ActionsMenu"></a>`ActionsMenu` - object
 
@@ -147,13 +147,13 @@ A new instance of ActionsMenu is created and used by the actionsMenu directive.
 
 # Related links
 
- * Contribute: https://github.com/ovh-ux/ovh-angular-actions-menu/blob/master/CONTRIBUTING.md
- * Report bugs: https://github.com/ovh-ux/ovh-angular-actions-menu/issues
- * Get latest version: https://github.com/ovh-ux/ovh-angular-actions-menu
+ * Contribute: https://github.com/ovh-ux/ng-ovh-actions-menu/blob/master/CONTRIBUTING.md
+ * Report bugs: https://github.com/ovh-ux/ng-ovh-actions-menu/issues
+ * Get latest version: https://github.com/ovh-ux/ng-ovh-actions-menu
 
 # License
 
-See https://github.com/ovh-ux/ovh-angular-actions-menu/blob/master/LICENSE
+See https://github.com/ovh-ux/ng-ovh-actions-menu/blob/master/LICENSE
 
 ### Arguments
 

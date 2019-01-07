@@ -48,8 +48,8 @@
  *  </pre>
  */
 
-import template from './ovh-angular-actions-menu.html';
-import controller from './ovh-angular-actions-menu.directive.controller';
+import template from './template.html';
+import controller from './controller';
 
 export default function () {
   return {

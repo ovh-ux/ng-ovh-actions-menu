@@ -13,7 +13,7 @@
  *  item has been clicked.
  */
 
-import template from './ovh-angular-actions-menu-item.html';
+import template from './template.html';
 
 export default function () {
   return {
