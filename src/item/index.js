@@ -20,16 +20,16 @@
 import angular from 'angular';
 import 'ovh-angular-responsive-popover';
 
-import actionsMenuItemDirective from './ovh-angular-actions-menu-item.directive';
-import actionsMenuItemFactory from './ovh-angular-actions-menu-item.factory';
+import directive from './directive';
+import factory from './factory';
 
-const moduleName = 'ovh-angular-actions-menu-item';
+const moduleName = 'ngOvhActionsMenuItem';
 
 angular
   .module(moduleName, [
     'ovh-angular-responsive-popover',
   ])
-  .factory('ActionsMenuItem', actionsMenuItemFactory)
-  .directive('actionsMenuItem', actionsMenuItemDirective);
+  .directive('actionsMenuItem', directive)
+  .factory('ActionsMenuItem', factory);
 
 export default moduleName;

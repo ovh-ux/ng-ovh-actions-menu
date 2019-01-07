@@ -1,11 +1,11 @@
 {
-  "name": "ovh-angular-actions-menu",
+  "name": "@ovh-ux/ng-ovh-actions-menu",
   "version": "4.0.0",
   "description": "An actions menu gives the opportunity to group a set of actions available for a specific context under a single menu",
   "keywords": [
     "angular"
   ],
-  "repository": "ovh-ux/ovh-angular-actions-menu",
+  "repository": "ovh-ux/ng-ovh-actions-menu",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "files": [
@@ -13,7 +13,7 @@
   ],
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "browser": "./dist/umd/ovh-angular-actions-menu.js",
+  "browser": "./dist/umd/ng-ovh-actions-menu.js",
   "scripts": {
     "build": "rollup -c",
     "lint": "run-p lint:html lint:css lint:js lint:md",

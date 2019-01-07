@@ -21,24 +21,25 @@ import angular from 'angular';
 import 'angular-translate';
 import 'ovh-angular-responsive-popover';
 
-import actionsMenuItem from './ovh-angular-actions-menu-item/ovh-angular-actions-menu-item';
-import actionsMenuDirective from './ovh-angular-actions-menu.directive';
-import actionsMenuProvider from './ovh-angular-actions-menu.provider';
-import actionsMenuFactory from './ovh-angular-actions-menu.factory';
+import ngOvhActionsMenuItem from './item';
 
-import './less/ovh-angular-actions-menu.less';
+import directive from './directive';
+import factory from './factory';
+import provider from './provider';
 
-const moduleName = 'ovh-angular-actions-menu';
+import './index.less';
+
+const moduleName = 'ngOvhActionsMenu';
 
 angular
   .module(moduleName, [
     'pascalprecht.translate',
     'ovh-angular-responsive-popover',
-    actionsMenuItem,
+    ngOvhActionsMenuItem,
   ])
-  .provider('actionsMenu', actionsMenuProvider)
-  .factory('ActionsMenu', actionsMenuFactory)
-  .directive('actionsMenu', actionsMenuDirective)
+  .directive('actionsMenu', directive)
+  .factory('ActionsMenu', factory)
+  .provider('actionsMenu', provider)
   .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;
