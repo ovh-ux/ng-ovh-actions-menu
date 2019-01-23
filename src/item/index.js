@@ -4,7 +4,7 @@
  * @name actionsMenu
  *
  *  @requires [pascalprecht.translate](https://github.com/angular-translate/angular-translate)
- *  @requires [ovh-angular-responsive-popover](https://github.com/ovh-ux/ovh-angular-responsive-popover)
+ *  @requires [ng-ovh-responsive-popover](https://github.com/ovh-ux/ng-ovh-responsive-popover)
  *
  * @description
  * _An actions menu gives the opportunity to group a set of actions available for a specific context
@@ -18,7 +18,8 @@
  */
 
 import angular from 'angular';
-import 'ovh-angular-responsive-popover';
+
+import '@ovh-ux/ng-ovh-responsive-popover';
 
 import directive from './directive';
 import factory from './factory';
@@ -27,7 +28,7 @@ const moduleName = 'ngOvhActionsMenuItem';
 
 angular
   .module(moduleName, [
-    'ovh-angular-responsive-popover',
+    'ngOvhResponsivePopover',
   ])
   .directive('actionsMenuItem', directive)
   .factory('ActionsMenuItem', factory);
