@@ -3,7 +3,10 @@
   "version": "5.0.3",
   "description": "An actions menu gives the opportunity to group a set of actions available for a specific context under a single menu",
   "keywords": [
-    "angular"
+    "actions-menu",
+    "angularjs",
+    "ovh",
+    "ovhcloud"
   ],
   "repository": "ovh-ux/ng-ovh-actions-menu",
   "license": "BSD-3-Clause",
